@@ -23,11 +23,7 @@
           </div>
 
           <div class="col">
-            <img
-              src="/utfpr-toledo.jpeg"
-              alt="UTFPR Toledo"
-              style="width: 100%; border-radius: 10px"
-            />
+            
           </div>
         </div>
 
