@@ -28,9 +28,9 @@ watch(darkMode, applyTheme);
 
 /* idiomas */
 const languages = [
-  { code: "pt", name: "Português" },
-  { code: "en", name: "English" },
-  { code: "es", name: "Español" }
+  { code: "pt" },
+  { code: "en" },
+  { code: "es" }
 ];
 const isLanguageOpen = ref(false);
 const changeLanguage = (lang: string) => {
@@ -71,7 +71,7 @@ const filteredRoutes = computed(() =>
         data-bs-target="#navbarNav"
         aria-controls="navbarNav"
         aria-expanded="false"
-        aria-label="Toggle navigation"
+        :aria-label="t('navbar.toggleNavigation')"
       >
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -112,7 +112,7 @@ const filteredRoutes = computed(() =>
           <!-- dropdown resultados -->
           <ul v-if="query && filteredRoutes.length" class="search-results">
             <li v-for="r in filteredRoutes" :key="r.path">
-              {{ r.children?.[0]?.name || t("navbar.noResults") }}
+              {{ t(`routes.${r.children[0].name.toLowerCase()}`) }}
             </li>
           </ul>
 
@@ -139,7 +139,7 @@ const filteredRoutes = computed(() =>
                   class="dropdown-item w-100 text-start"
                   @click="changeLanguage(lang.code)"
                 >
-                  {{ lang.name }}
+                  {{ t("languageNames." + lang.code) }}
                 </button>
               </li>
             </ul>

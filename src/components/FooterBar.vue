@@ -12,24 +12,26 @@
             <a
               href="https://whatsapp.com/channel/0029Vb3tWIO3wtb3Jvag6Z0H"
               target="_blank"
+              :aria-label="$t('footer.socialMedia.whatsapp')"
             ></a>
           </li>
           <li class="social-midia">
-            <a href="https://twitter.com/utfpr_" target="_blank"></a>
+            <a href="https://twitter.com/utfpr_" target="_blank" :aria-label="$t('footer.socialMedia.twitter')"></a>
           </li>
           <li class="social-midia">
-            <a href="https://www.youtube.com/canaldaUTFPR" target="_blank"></a>
+            <a href="https://www.youtube.com/canaldaUTFPR" target="_blank" :aria-label="$t('footer.socialMedia.youtube')"></a>
           </li>
           <li class="social-midia">
-            <a href="https://www.instagram.com/utfpr_/" target="_blank"></a>
+            <a href="https://www.instagram.com/utfpr_/" target="_blank" :aria-label="$t('footer.socialMedia.instagram')"></a>
           </li>
           <li class="social-midia">
-            <a href="https://www.facebook.com/UTFPR/" target="_blank"></a>
+            <a href="https://www.facebook.com/UTFPR/" target="_blank" :aria-label="$t('footer.socialMedia.facebook')"></a>
           </li>
           <li class="social-midia">
             <a
               href="https://www.linkedin.com/school/utfpr-oficial/?originalSubdomain=br"
               target="_blank"
+              :aria-label="$t('footer.socialMedia.linkedin')"
             ></a>
           </li>
         </ul>

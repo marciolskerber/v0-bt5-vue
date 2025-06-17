@@ -4,7 +4,9 @@
     "language": "Idioma",
     "navbar": {
       "search": "Buscar",
-      "darkMode": "Modo Escuro"
+      "darkMode": "Modo Escuro",
+      "toggleNavigation": "Alternar navegação",
+      "noResults": "Nenhum resultado encontrado"
     },
     "routes": {
       "home": "Início",
@@ -19,7 +21,15 @@
       "address": "R. Cristo Rei, 19 – Vila Becker, Toledo – PR, 85902-490",
       "phone": "(45) 3379-6800",
       "email": "contato@utfpr.edu.br",
-      "copyright": "© 2025 Universidade Tecnológica Federal do Paraná. Todos os direitos reservados."
+      "copyright": "© 2025 Universidade Tecnológica Federal do Paraná. Todos os direitos reservados.",
+      "socialMedia": {
+        "whatsapp": "Link para o WhatsApp",
+        "twitter": "Link para o Twitter",
+        "youtube": "Link para o YouTube",
+        "instagram": "Link para o Instagram",
+        "facebook": "Link para o Facebook",
+        "linkedin": "Link para o LinkedIn"
+      }
     },
     "languageNames": {
       "pt": "Português",
@@ -33,7 +43,9 @@
     "language": "Language",
     "navbar": {
       "search": "Search",
-      "darkMode": "Dark Mode"
+      "darkMode": "Dark Mode",
+      "toggleNavigation": "Toggle navigation",
+      "noResults": "No results found"
     },
     "routes": {
       "home": "Home",
@@ -48,7 +60,15 @@
       "address": "R. Cristo Rei, 19 – Vila Becker, Toledo – PR, 85902-490",
       "phone": "(45) 3379-6800",
       "email": "contact@utfpr.edu.br",
-      "copyright": "© 2025 Federal University of Technology – Paraná. All rights reserved."
+      "copyright": "© 2025 Federal University of Technology – Paraná. All rights reserved.",
+      "socialMedia": {
+        "whatsapp": "Link to WhatsApp",
+        "twitter": "Link to Twitter",
+        "youtube": "Link to YouTube",
+        "instagram": "Link to Instagram",
+        "facebook": "Link to Facebook",
+        "linkedin": "Link to LinkedIn"
+      }
     },
     "languageNames": {
       "pt": "Portuguese",
@@ -62,7 +82,9 @@
     "language": "Idioma",
     "navbar": {
       "search": "Buscar",
-      "darkMode": "Modo Oscuro"
+      "darkMode": "Modo Oscuro",
+      "toggleNavigation": "Alternar navegación",
+      "noResults": "No se encontraron resultados"
     },
     "routes": {
       "home": "Inicio",
@@ -77,7 +99,15 @@
       "address": "R. Cristo Rei, 19 – Vila Becker, Toledo – PR, 85902-490",
       "phone": "(45) 3379-6800",
       "email": "contacto@utfpr.edu.br",
-      "copyright": "© 2025 Universidad Tecnológica Federal de Paraná. Todos los derechos reservados."
+      "copyright": "© 2025 Universidad Tecnológica Federal de Paraná. Todos los derechos reservados.",
+      "socialMedia": {
+        "whatsapp": "Enlace a WhatsApp",
+        "twitter": "Enlace a Twitter",
+        "youtube": "Enlace a YouTube",
+        "instagram": "Enlace a Instagram",
+        "facebook": "Enlace a Facebook",
+        "linkedin": "Enlace a LinkedIn"
+      }
     },
     "languageNames": {
       "pt": "Portugués",
