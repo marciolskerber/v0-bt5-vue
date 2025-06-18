@@ -4,7 +4,23 @@ const { t } = useI18n();
 </script>
 <template>
   <div class="container mt-5">
-    <h1>{{ t('aboutPage.title') }}</h1>
-    <p>{{ t('aboutPage.content') }}</p>
+    <h1 class="mb-4 text-start">{{ t('aboutPage.title') }}</h1>
+    <div class="about-text">
+      <p v-html="t('aboutPage.paragraph1')"></p>
+      <p v-html="t('aboutPage.paragraph2')"></p>
+      <p v-html="t('aboutPage.paragraph3')"></p>
+    </div>
   </div>
 </template>
+<style scoped>
+h1 {
+  font-family: "Oswald", serif;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+.about-text {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-align: left;
+}
+</style>

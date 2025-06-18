@@ -37,12 +37,24 @@
       "es": "Espanhol"
     },
     "aboutPage": {
-      "title": "Sobre Nós",
-      "content": "Esta é a página Sobre. Mais informações sobre o projeto ou a equipe podem ser adicionadas aqui."
+      "title": "Sobre nós",
+      "paragraph1": "Este site foi desenvolvido como parte da disciplina <strong>Web Front-End II</strong> da UTFPR, utilizando Vue 3, Vite, TypeScript, Beercss e i18n.",
+      "paragraph2": "O projeto demonstra boas práticas de front-end, com suporte a múltiplos idiomas, formulário funcional e responsividade.",
+      "paragraph3": "Desenvolvido por <strong>Vinícius Tabarão</strong>, aluno UTFPR."
     },
     "contactPage": {
-      "title": "Contato",
-      "content": "Esta é a página de Contato. Informações de contato como e-mail, telefone ou um formulário podem ser adicionadas aqui."
+      "title": "Fale conosco",
+      "form": {
+        "nameLabel": "Nome",
+        "namePlaceholder": "Digite seu nome",
+        "emailLabel": "Email",
+        "emailPlaceholder": "email@exemplo.com",
+        "submitButton": "Enviar"
+      }
+    },
+    "homePage": {
+      "title": "Página Inicial",
+      "welcomeMessage": "Bem-vindo à página principal do nosso site."
     }
   },
 
@@ -66,8 +78,8 @@
       "description": "UTFPR is a higher-education institution focused on technology and innovation, offering undergraduate, graduate, and research programs.",
       "contact": "Contact",
       "address": "R. Cristo Rei, 19 – Vila Becker, Toledo – PR, 85902-490",
-      "phone": "(45) 3379-6800",
-      "email": "contact@utfpr.edu.br",
+      "phone": "+55  (45) 3379-6800",
+      "email": "contato@utfpr.edu.br",
       "copyright": "© 2025 Federal University of Technology – Paraná. All rights reserved.",
       "socialMedia": {
         "whatsapp": "Link to WhatsApp",
@@ -85,11 +97,23 @@
     },
     "aboutPage": {
       "title": "About Us",
-      "content": "This is the About page. More information about the project or the team can be added here."
+      "paragraph1": "This website was developed as part of the <strong>Web Front-End II</strong> course at UTFPR, using Vue 3, Vite, TypeScript, Beercss, and i18n.",
+      "paragraph2": "The project demonstrates front-end best practices, with support for multiple languages, a functional form, and responsiveness.",
+      "paragraph3": "Developed by <strong>Vinícius Tabarão</strong>, a UTFPR student."
     },
     "contactPage": {
-      "title": "Contact",
-      "content": "This is the Contact page. Contact information such as email, phone, or a form can be added here."
+      "title": "Contact Us",
+      "form": {
+        "nameLabel": "Name",
+        "namePlaceholder": "Enter your name",
+        "emailLabel": "Email",
+        "emailPlaceholder": "email@example.com",
+        "submitButton": "Submit"
+      }
+    },
+    "homePage": {
+      "title": "Home Page",
+      "welcomeMessage": "Welcome to the main page of our website."
     }
   },
 
@@ -113,8 +137,8 @@
       "description": "La UTFPR es una institución de educación superior enfocada en la tecnología y la innovación, ofreciendo programas de grado, posgrado e investigación.",
       "contact": "Contacto",
       "address": "R. Cristo Rei, 19 – Vila Becker, Toledo – PR, 85902-490",
-      "phone": "(45) 3379-6800",
-      "email": "contacto@utfpr.edu.br",
+      "phone": "+55 (45) 3379-6800",
+      "email": "contato@utfpr.edu.br",
       "copyright": "© 2025 Universidad Tecnológica Federal de Paraná. Todos los derechos reservados.",
       "socialMedia": {
         "whatsapp": "Enlace a WhatsApp",
@@ -132,11 +156,23 @@
     },
     "aboutPage": {
       "title": "Sobre Nosotros",
-      "content": "Esta es la página Acerca de. Más información sobre el proyecto o el equipo se puede agregar aquí."
+      "paragraph1": "Este sitio web fue desarrollado como parte de la asignatura <strong>Web Front-End II</strong> de la UTFPR, utilizando Vue 3, Vite, TypeScript, Beercss e i18n.",
+      "paragraph2": "El proyecto demuestra buenas prácticas de front-end, con soporte para múltiples idiomas, un formulario funcional y responsividad.",
+      "paragraph3": "Desarrollado por <strong>Vinícius Tabarão</strong>, alumno de la UTFPR."
     },
     "contactPage": {
-      "title": "Contacto",
-      "content": "Esta es la página de Contacto. La información de contacto como correo electrónico, teléfono o un formulario se puede agregar aquí."
+      "title": "Contáctenos",
+      "form": {
+        "nameLabel": "Nombre",
+        "namePlaceholder": "Escriba su nombre",
+        "emailLabel": "Correo electrónico",
+        "emailPlaceholder": "email@ejemplo.com",
+        "submitButton": "Enviar"
+      }
+    },
+    "homePage": {
+      "title": "Página de Inicio",
+      "welcomeMessage": "Bienvenido a la página principal de nuestro sitio web."
     }
   }
 }
