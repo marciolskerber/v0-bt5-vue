@@ -1,11 +1,11 @@
 <template>
-  <section class="container">
-    <transition name="fade">
-      <div>
-        <h1 class="center-align">Sobre nós</h1>
+  <main>
+    <section class="container py-5" > 
+      <transition name="fade">
+        <div>
+          <h1 class="mb-4 text-start">Sobre nós</h1>
 
-        <div class="grid">
-          <div class="col">
+          <div class="about-text">
             <p>
               Este site foi desenvolvido como parte da disciplina
               <strong>Web Front-End II</strong> da UTFPR, utilizando Vue 3,
@@ -22,50 +22,45 @@
             </p>
           </div>
 
-          <div class="col">
-            
-          </div>
-        </div>
+          <div class="contact-form mt-5">
+            <h2 class="mb-4 text-start">Fale conosco</h2>
 
-        <!-- FORMULÁRIO DE CONTATO COM ANIMAÇÃO -->
-        <transition name="fade">
-          <div class="margin-top">
-            <h2 class="center-align">Fale conosco</h2>
-
-            <form @submit.prevent="enviarFormulario" class="margin">
-              <div class="field">
-                <label for="nome">Nome:</label>
+            <form @submit.prevent="enviarFormulario">
+              <div class="mb-3">
+                <label for="nome" class="form-label">Nome</label>
                 <input
-                  id="nome"
                   type="text"
-                  class="control"
-                  placeholder="Digite seu nome"
+                  class="form-control"
+                  id="nome"
                   v-model="nome"
+                  placeholder="Digite seu nome"
                   required
                 />
               </div>
 
-              <div class="field">
-                <label for="email">Email:</label>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
                 <input
-                  id="email"
                   type="email"
-                  class="control"
-                  placeholder="email@exemplo.com"
+                  class="form-control"
+                  id="email"
                   v-model="email"
+                  placeholder="email@exemplo.com"
                   required
                 />
               </div>
 
-              <button type="submit" class="btn margin-top">Enviar</button>
+              <button type="submit" class="btn btn-success w-100">
+                Enviar
+              </button>
             </form>
           </div>
-        </transition>
-      </div>
-    </transition>
+        </div>
+      </transition>
+    </section>
 
     <Footer />
-  </section>
+  </main>
 </template>
 
 <script setup lang="ts">
@@ -83,29 +78,58 @@ const enviarFormulario = () => {
 </script>
 
 <style scoped>
-.grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  margin-top: 2rem;
+
+
+h1, h2 {
+  font-family: "Oswald", serif;
+  text-align: left;
 }
-.col {
-  flex: 1;
-  min-width: 280px;
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
 }
-.margin-top {
-  margin-top: 3rem;
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.25rem;
 }
+
+.about-text {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-align: left;
+}
+
+.contact-form {
+  max-width: 30em;
+  font-size: 1rem;
+}
+
+.form-label {
+  font-size: 1rem;
+}
+
+input.form-control {
+  font-size: 1rem;
+  padding: 0.5em;
+}
+
+button.btn {
+  font-size: 1rem;
+  padding: 0.75em 0;
+}
+
 .fade-enter-active,
 .fade-leave-active {
-  transition:
-    opacity 0.6s ease,
-    transform 0.6s ease;
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
+
 .fade-enter-from {
   opacity: 0;
   transform: translateY(30px);
 }
+
 .fade-enter-to {
   opacity: 1;
   transform: translateY(0);
