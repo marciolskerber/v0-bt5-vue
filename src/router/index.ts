@@ -14,7 +14,7 @@ export const routes = [
     path: `${baseUrl}/about`,
     //component: () => import("@/layouts/Page.vue"),
     children: [
-      { path: "", name: "About", component: () => import("@/views/HomeView.vue") }
+      { path: "", name: "About", component: () => import("@/views/AboutView.vue") }
     ],
   },
 
@@ -22,7 +22,7 @@ export const routes = [
     path: `${baseUrl}/contacts`,
     //component: () => import("@/layouts/Page.vue"),
     children: [
-      { path: "", name: "Contacts", component: () => import("@/views/HomeView.vue") },
+      { path: "", name: "Contacts", component: () => import("@/views/ContactView.vue") },
     ],
   },
   

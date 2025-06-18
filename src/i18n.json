@@ -35,6 +35,14 @@
       "pt": "Português",
       "en": "Inglês",
       "es": "Espanhol"
+    },
+    "aboutPage": {
+      "title": "Sobre Nós",
+      "content": "Esta é a página Sobre. Mais informações sobre o projeto ou a equipe podem ser adicionadas aqui."
+    },
+    "contactPage": {
+      "title": "Contato",
+      "content": "Esta é a página de Contato. Informações de contato como e-mail, telefone ou um formulário podem ser adicionadas aqui."
     }
   },
 
@@ -74,6 +82,14 @@
       "pt": "Portuguese",
       "en": "English",
       "es": "Spanish"
+    },
+    "aboutPage": {
+      "title": "About Us",
+      "content": "This is the About page. More information about the project or the team can be added here."
+    },
+    "contactPage": {
+      "title": "Contact",
+      "content": "This is the Contact page. Contact information such as email, phone, or a form can be added here."
     }
   },
 
@@ -113,6 +129,14 @@
       "pt": "Portugués",
       "en": "Inglés",
       "es": "Español"
+    },
+    "aboutPage": {
+      "title": "Sobre Nosotros",
+      "content": "Esta es la página Acerca de. Más información sobre el proyecto o el equipo se puede agregar aquí."
+    },
+    "contactPage": {
+      "title": "Contacto",
+      "content": "Esta es la página de Contacto. La información de contacto como correo electrónico, teléfono o un formulario se puede agregar aquí."
     }
   }
 }
