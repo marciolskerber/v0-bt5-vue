@@ -7,11 +7,27 @@ import translateFile from "@/i18n.json";
 
 // Definir as traduções para o idioma
 const messages = translateFile;
+const availableLocales = Object.keys(messages);
+
+// Função para determinar o idioma inicial
+function getInitialLocale(): string {
+  const savedLocale = localStorage.getItem("language");
+  if (savedLocale && availableLocales.includes(savedLocale)) {
+    return savedLocale;
+  }
+
+  const browserLocale = navigator.language.split("-")[0];
+  if (availableLocales.includes(browserLocale)) {
+    return browserLocale;
+  }
+
+  return "pt"; // Idioma padrão de fallback
+}
 
 const i18n = createI18n({
   legacy: false, // Necessário para Composition API
-  locale: "pt", // Idioma padrão
-  fallbackLocale: "en", // Idioma de fallback
+  locale: getInitialLocale(), // Idioma padrão
+  fallbackLocale: "pt", // Idioma de fallback
   messages, // Mensagens definidas
 });
 
