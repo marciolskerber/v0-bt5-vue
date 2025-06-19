@@ -76,8 +76,6 @@ const socialLinks = [
 </script>
 
 <style scoped>
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
-
 .footer {
   background-color: #151515;
   padding: 30px 0;

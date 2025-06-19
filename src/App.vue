@@ -24,6 +24,7 @@ const { t } = useI18n(); // Remova 'locale' pois não é usado
 </template>
 
 <style scoped>
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
 /* Estilos para ajustar o layout, consistentes com a imagem */
 #app {
   padding-top: 0; /* Remove qualquer padding indesejado no topo */
