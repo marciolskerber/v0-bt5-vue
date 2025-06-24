@@ -4,7 +4,6 @@ import { useRouter } from "vue-router";
 import { routes } from "@/router";
 import { useI18n } from "vue-i18n";
 
-const siteUrl = import.meta.env.VITE_BUILD_ADDRESS || "";
 const router = useRouter();
 const { t, locale } = useI18n();
 
@@ -60,6 +59,13 @@ const filteredRoutes = computed(() =>
     )
   )
 );
+
+const goToSearch = () => {
+  if (query.value.trim()) {
+    router.push({ path: "/search", query: { q: query.value } });
+    query.value = "";
+  }
+};
 </script>
 
 <template>
@@ -80,10 +86,10 @@ const filteredRoutes = computed(() =>
         id="navbarNav"
         class="collapse navbar-collapse d-flex justify-content-between"
       >
-        <!-- links das rotas -->
+        <!-- links das rotas, exceto as com meta.hidden -->
         <ul class="navbar-nav">
           <li
-            v-for="route in routes"
+            v-for="route in routes.filter(r => !r.meta?.hidden)"
             :key="route.path"
             class="nav-item text-uppercase"
           >
@@ -103,13 +109,16 @@ const filteredRoutes = computed(() =>
 
         <!-- busca + idioma + switch tema -->
         <div class="d-flex align-items-center">
-          <input
-            v-model="query"
-            :placeholder="t('navbar.search')"
-            class="form-control me-2"
-          />
+          <!-- Formulário de busca com Enter -->
+          <form @submit.prevent="goToSearch" class="d-flex me-2">
+            <input
+              v-model="query"
+              :placeholder="t('navbar.search')"
+              class="form-control"
+            />
+          </form>
 
-          <!-- dropdown resultados -->
+          <!-- dropdown resultados (opcional, pode remover se não usar) -->
           <ul v-if="query && filteredRoutes.length" class="search-results">
             <li v-for="r in filteredRoutes" :key="r.path">
               {{ t(`routes.${r.children[0].name.toLowerCase()}`) }}
@@ -117,7 +126,7 @@ const filteredRoutes = computed(() =>
           </ul>
 
           <!-- seletor de idioma -->
-          <div class="language-selector">
+          <div class="language-selector ms-3">
             <button
               class="btn btn-outline-secondary dropdown-toggle"
               @click="isLanguageOpen = !isLanguageOpen"
@@ -162,4 +171,3 @@ const filteredRoutes = computed(() =>
     </div>
   </nav>
 </template>
-
