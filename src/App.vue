@@ -14,10 +14,6 @@ const { t } = useI18n(); // Remova 'locale' pois não é usado
     <!-- Barra de navegação com o dropdown de idioma estilizado, links e modo escuro -->
     <Navbar />
 
-    <!-- Adiciona o carrossel -->
-    <AppCarousel />
-    <!-- Atualize para AppCarousel -->
-
     <!-- Renderiza as rotas (HomeView, AboutView, ContactsView, etc.) -->
     <RouterView />
   </div>
