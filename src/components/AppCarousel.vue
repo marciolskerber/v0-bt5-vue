@@ -3,9 +3,21 @@ import { ref } from 'vue'
 
 const currentSlide = ref(0)
 const slides = [
-  { image: 'https://imgur.com/cfAFVYp.jpeg', title: 'UTFPR', description: 'UTFPR Entrada' },
-  { image: 'https://imgur.com/EqzHwzW.jpeg', title: 'A.A.A.T', description: 'TUT' },
-  { image: 'https://imgur.com/WrmGgEC.jpeg', title: 'UTFPR', description: 'UTFPR Bloco A' }
+  { 
+      image: 'https://imgur.com/cfAFVYp.jpeg', 
+      //title: 'UTFPR', 
+      //description: 'UTFPR Entrada' 
+    },
+  { 
+      image: 'https://imgur.com/EqzHwzW.jpeg', 
+      //title: 'A.A.A.T', 
+      //description: 'TUT' 
+  },
+  { 
+      image: 'https://imgur.com/WrmGgEC.jpeg', 
+      //title: 'UTFPR', 
+      //description: 'UTFPR Bloco A' 
+  }
 ]
 
 const nextSlide = () => { currentSlide.value = (currentSlide.value + 1) % slides.length }
