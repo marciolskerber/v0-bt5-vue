@@ -5,27 +5,29 @@ const baseUrl = "";
 export const routes = [
   {
     path: `${baseUrl}/`,
-    //component: () => import("@/layouts/Default.vue"),
     children: [
       { path: "", name: "Home", component: () => import("@/views/HomeView.vue") }
     ],
   },
   {
     path: `${baseUrl}/about`,
-    //component: () => import("@/layouts/Page.vue"),
     children: [
       { path: "", name: "About", component: () => import("@/views/AboutView.vue") }
     ],
   },
-
   {
     path: `${baseUrl}/contacts`,
-    //component: () => import("@/layouts/Page.vue"),
     children: [
       { path: "", name: "Contacts", component: () => import("@/views/ContactView.vue") },
     ],
   },
-  
+  {
+    path: `${baseUrl}/search`,
+    meta: { hidden: true },
+    children: [
+      { path: "", name: "Search", component: () => import("@/views/SearchView.vue") },
+    ],
+  },
 ];
 
 export const router = createRouter({
