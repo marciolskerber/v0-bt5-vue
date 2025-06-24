@@ -14,11 +14,3 @@ import Footer from "@/components/FooterBar.vue";
 
 const { t } = useI18n();
 </script>
-
-<style scoped>
-h1 {
-  font-family: "Oswald", serif;
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-}
-</style>
