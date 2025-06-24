@@ -21,4 +21,4 @@ const { t } = useI18n(); // Remova 'locale' pois não é usado
     <!-- Renderiza as rotas (HomeView, AboutView, ContactsView, etc.) -->
     <RouterView />
   </div>
-</template>
+</template> 
