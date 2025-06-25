@@ -1,37 +1,51 @@
 <template>
-  <footer class="footer container-fluid">
-    <div class="footer-content">
-      <div class="footer-section">
-        <h4>{{ $t("footer.title") }}</h4>
-        <p>{{ $t("footer.description") }}</p>
-        <ul class="social-links">
-          <li v-for="(link, index) in socialLinks" :key="index">
-            <a :href="link.url" target="_blank">
-              <img :src="link.icon" :alt="link.name" />
+  <footer class="pt-4 border-top mt-5 bg-body-secondary text-body">
+    <div class="container py-4">
+      <div class="row">
+        <!-- Institucional -->
+        <div class="col-md-4 mb-4">
+          <h5 class="fw-bold">{{ t("footer.title") }}</h5>
+          <p>{{ t("footer.description") }}</p>
+        </div>
+
+        <!-- Contato -->
+        <div class="col-md-4 mb-4">
+          <h5 class="fw-bold">{{ t("footer.contact") }}</h5>
+          <ul class="list-unstyled">
+            <li>{{ t("footer.address") }}</li>
+            <li>{{ t("footer.phone") }}</li>
+            <li>
+              <a :href="'mailto:' + t('footer.email')" class="text-decoration-none">
+                {{ t("footer.email") }}
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Redes sociais com imagens locais -->
+        <div class="col-md-4 mb-4">
+          <h5 class="fw-bold">Social</h5>
+          <div class="d-flex flex-wrap gap-2">
+            <a
+              v-for="(url, name) in socialMedia"
+              :key="name"
+              :href="url"
+              target="_blank"
+              rel="noopener"
+              class="d-inline-block"
+            >
+              <img
+                :src="getIconPath(name)"
+                :alt="name"
+                class="social-icon"
+              />
             </a>
-          </li>
-        </ul>
+          </div>
+        </div>
       </div>
 
-      <div class="footer-section">
-        <h4>{{ $t("footer.contact") }}</h4>
-        <ul class="contact-info">
-          <li>
-            <a
-              href="https://maps.app.goo.gl/2Qv9AmF8pPXBYeFK9"
-              target="_blank"
-              >{{ $t("footer.address") }}</a
-            >
-          </li>
-          <li>
-            <a href="tel:+55453379-6800">{{ $t("footer.phone") }}</a>
-          </li>
-          <li>
-            <a href="mailto:epsantos@utfpr.edu.br"
-              >{{ $t("footer.email") }}</a
-            >
-          </li>
-        </ul>
+      <div class="text-center mt-4 small text-muted">
+        {{ t("footer.copyright") }}
       </div>
     </div>
   </footer>
@@ -39,108 +53,19 @@
 
 <script setup lang="ts">
 import { useI18n } from "vue-i18n";
-useI18n();
+const { t } = useI18n();
 
-const socialLinks = [
-  {
-    name: "WhatsApp",
-    url: "https://whatsapp.com/channel/0029Vb3tWIO3wtb3Jvag6Z0H",
-    icon: "src/img/whatsapp.png",
-  },
-  {
-    name: "Twitter",
-    url: "https://twitter.com/utfpr_",
-    icon: "src/img/twitter.png",
-  },
-  {
-    name: "YouTube",
-    url: "https://www.youtube.com/canaldaUTFPR",
-    icon: "src/img/youtube.png",
-  },
-  {
-    name: "Instagram",
-    url: "https://www.instagram.com/utfpr_/",
-    icon: "src/img/instagram.png",
-  },
-  {
-    name: "Facebook",
-    url: "https://www.facebook.com/UTFPR/",
-    icon: "src/img/facebook.png",
-  },
-  {
-    name: "LinkedIn",
-    url: "https://www.linkedin.com/school/utfpr-oficial/",
-    icon: "src/img/linkedin.png",
-  },
-];
+const socialMedia = {
+  whatsapp: t("footer.socialMedia.whatsapp"),
+  twitter: t("footer.socialMedia.twitter"),
+  youtube: t("footer.socialMedia.youtube"),
+  instagram: t("footer.socialMedia.instagram"),
+  facebook: t("footer.socialMedia.facebook"),
+  linkedin: t("footer.socialMedia.linkedin"),
+};
+
+// função para pegar o caminho da imagem da pasta img
+const getIconPath = (name: string) => {
+  return new URL(`/src/img/${name}.png`, import.meta.url).href;
+};
 </script>
-
-<style scoped>
-.footer {
-  background-color: #151515;
-  padding: 30px 0;
-  color: white;
-  font-family: "Oswald", sans-serif;
-}
-
-.footer-content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: flex-start;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.footer-section {
-  flex: 1;
-  min-width: 250px;
-  padding: 10px;
-  text-align: center;
-}
-
-h4 {
-  margin-bottom: 10px;
-}
-
-p {
-  margin-bottom: 15px;
-}
-
-.social-links {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-}
-
-.social-links li img {
-  width: 32px;
-  height: 32px;
-  transition: transform 0.3s;
-}
-
-.social-links li img:hover {
-  transform: scale(1.1);
-}
-
-.contact-info {
-  list-style: none;
-  padding: 0;
-}
-
-.contact-info li {
-  margin-bottom: 10px;
-}
-
-a {
-  color: white;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-a:hover {
-  color: #42b983;
-}
-</style>
