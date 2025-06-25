@@ -2,6 +2,7 @@
 import { useI18n } from "vue-i18n";
 import Navbar from "@/components/NavBar.vue"; // Importe o Navbar.vue
 
+import FooterBar from "@/components/FooterBar.vue"; 
 const { t } = useI18n(); // Remova 'locale' pois não é usado
 </script>
 
@@ -15,5 +16,8 @@ const { t } = useI18n(); // Remova 'locale' pois não é usado
 
     <!-- Renderiza as rotas (HomeView, AboutView, ContactsView, etc.) -->
     <RouterView />
+    
+    <!-- Criar rodapé -->
+    <FooterBar />
   </div>
 </template> 
