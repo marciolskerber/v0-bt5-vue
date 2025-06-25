@@ -27,12 +27,13 @@
           <h5 class="fw-bold">Social</h5>
           <div class="d-flex flex-wrap gap-2">
             <a
-              v-for="(url, name) in socialMedia"
+              v-for="(url, name) in socialLinks"
               :key="name"
               :href="url"
               target="_blank"
               rel="noopener"
               class="d-inline-block"
+              :aria-label="t('footer.socialMedia.' + name)"
             >
               <img
                 :src="getIconPath(name)"
@@ -55,13 +56,13 @@
 import { useI18n } from "vue-i18n";
 const { t } = useI18n();
 
-const socialMedia = {
-  whatsapp: t("footer.socialMedia.whatsapp"),
-  twitter: t("footer.socialMedia.twitter"),
-  youtube: t("footer.socialMedia.youtube"),
-  instagram: t("footer.socialMedia.instagram"),
-  facebook: t("footer.socialMedia.facebook"),
-  linkedin: t("footer.socialMedia.linkedin"),
+const socialLinks = {
+  twitter: "https://x.com/utfpr_td",
+  whatsapp: "tel:+554530801800",
+  youtube: "https://www.youtube.com/@UTFPRToledoOficial",
+  instagram: "https://www.instagram.com/utfprtd",
+  facebook: "https://www.facebook.com/UTFPR.TD/",
+  linkedin: "https://br.linkedin.com/company/datcom-utfpr-td",
 };
 
 // função para pegar o caminho da imagem da pasta img
