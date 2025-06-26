@@ -2,41 +2,54 @@
 import { ref } from 'vue'
 
 const currentSlide = ref(0)
+
 const slides = [
   { 
-      image: 'https://storage.alboom.ninja/sites/33900/albuns/693318/utfpr_-_toledo_bloco_a__5_.png?t=1597589780', 
-      //title: 'Bloco A', 
+    image: 'https://storage.alboom.ninja/sites/33900/albuns/693318/utfpr_-_toledo_bloco_a__5_.png?t=1597589780', 
+    title: 'Bloco A',
+    description: 'Imagem do Bloco A da UTFPR Toledo'
   },
   {
-    image :'https://storage.alboom.ninja/sites/33900/albuns/693318/utfpr_-_toledo__1_.png?t=1597589776',
-    //title: 'Bloco C.1'
+    image: 'https://storage.alboom.ninja/sites/33900/albuns/693318/utfpr_-_toledo__1_.png?t=1597589776',
+    title: 'Bloco C.1',
+    description: 'Bloco C.1 do campus'
   },
   {
     image: 'https://storage.alboom.ninja/sites/33900/albuns/693318/utfpr_-_toledo__6_.png?t=1597589777',
-    //title: 'Bloco C.2'
+    title: 'Bloco C.2',
+    description: 'Vista do Bloco C.2'
   },
   { 
-      image: 'https://gazetadetoledo.com.br/wp-content/uploads/2024/09/UTFPR_campus_Toledo_foto_Carlos_Rodrigues.jpg', 
-      //title: 'UTFPR', 
-      //description: 'UTFPR Entrada' 
+    image: 'https://gazetadetoledo.com.br/wp-content/uploads/2024/09/UTFPR_campus_Toledo_foto_Carlos_Rodrigues.jpg', 
+    title: 'Entrada UTFPR',
+    description: 'Entrada principal do campus'
   },
   {
     image: 'https://integrae.com.br/wp-content/uploads/2019/07/raposa.png',
-    //title: 'Raposa_A'
+    title: 'Raposa A',
+    description: 'Mascote da UTFPR - versão A'
   },
   {
     image: 'https://integrae.com.br/wp-content/uploads/2018/11/WhatsApp-Image-2018-11-23-at-12.19.44-1024x683.jpeg',
-    //title: 'Raposa_B'
+    title: 'Raposa B',
+    description: 'Mascote da UTFPR - versão B'
   },
   { 
-      image: 'https://www.utfpr.edu.br/noticias/toledo/raposa/@@images/image-1280-4e89e65ff82c080be26c69c4a55f46fe.jpeg', 
-     //title: 'Raposa_C'' 
-  },
+    image: 'https://www.utfpr.edu.br/noticias/toledo/raposa/@@images/image-1280-4e89e65ff82c080be26c69c4a55f46fe.jpeg', 
+    title: 'Raposa C',
+    description: 'Mascote da UTFPR - versão C'
+  }
 ]
 
-const nextSlide = () => { currentSlide.value = (currentSlide.value + 1) % slides.length }
-const prevSlide = () => { currentSlide.value = (currentSlide.value - 1 + slides.length) % slides.length }
-const goToSlide = (index: number) => { currentSlide.value = index }
+const nextSlide = () => {
+  currentSlide.value = (currentSlide.value + 1) % slides.length
+}
+const prevSlide = () => {
+  currentSlide.value = (currentSlide.value - 1 + slides.length) % slides.length
+}
+const goToSlide = (index: number) => {
+  currentSlide.value = index
+}
 </script>
 
 <template>
@@ -100,6 +113,8 @@ const goToSlide = (index: number) => { currentSlide.value = index }
   color: white;
   background: rgba(0, 0, 0, 0.5);
   padding: 10px;
+  max-width: 80%;
+  border-radius: 0.5rem;
 }
 
 .prev, .next {
@@ -111,6 +126,7 @@ const goToSlide = (index: number) => { currentSlide.value = index }
   border: none;
   padding: 10px;
   cursor: pointer;
+  z-index: 10;
 }
 
 .prev {
