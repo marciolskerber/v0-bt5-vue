@@ -4,17 +4,22 @@ import { ref } from 'vue'
 const currentSlide = ref(0)
 const slides = [
   { 
-      image: 'https://imgur.com/cfAFVYp.jpeg', 
+      image: 'https://storage.alboom.ninja/sites/33900/albuns/693318/utfpr_-_toledo_bloco_a__5_.png?t=1597589780', 
       //title: 'UTFPR', 
       //description: 'UTFPR Entrada' 
     },
   { 
-      image: 'https://imgur.com/EqzHwzW.jpeg', 
+      image: 'https://storage.alboom.ninja/sites/33900/albuns/693318/utfpr_-_toledo__1_.png?t=1597589776', 
       //title: 'A.A.A.T', 
       //description: 'TUT' 
   },
   { 
-      image: 'https://imgur.com/WrmGgEC.jpeg', 
+      image: 'https://storage.alboom.ninja/sites/33900/albuns/693318/utfpr_-_toledo__6_.png?t=1597589777', 
+      //title: 'UTFPR', 
+      //description: 'UTFPR Bloco A' 
+  },
+  { 
+      image: 'https://gazetadetoledo.com.br/wp-content/uploads/2024/09/UTFPR_campus_Toledo_foto_Carlos_Rodrigues.jpg', 
       //title: 'UTFPR', 
       //description: 'UTFPR Bloco A' 
   }

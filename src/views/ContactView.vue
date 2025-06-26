@@ -12,47 +12,70 @@ const enviarFormulario = () => {
   alert("Mensagem enviada com sucesso!");
 };
 </script>
+
 <template>
   <div class="container mt-5">
-    <div class="contact-form">
-      <h2 class="mb-4 text-start">{{ t('contactPage.title') }}</h2>
+    <div class="row">
+      <!-- Coluna: Formulário -->
+      <div class="col-md-6 mb-4">
+        <div class="contact-form">
+          <h2 class="mb-4 text-start">{{ t('contactPage.title') }}</h2>
 
-      <form @submit.prevent="enviarFormulario">
-        <div class="mb-3">
-          <label for="nome" class="form-label">{{ t('contactPage.form.nameLabel') }}</label>
-          <input
-            type="text"
-            class="form-control"
-            id="nome"
-            v-model="nome"
-            :placeholder="t('contactPage.form.namePlaceholder')"
-            required
-          />
+          <form @submit.prevent="enviarFormulario">
+            <div class="mb-3">
+              <label for="nome" class="form-label">{{ t('contactPage.form.nameLabel') }}</label>
+              <input
+                type="text"
+                class="form-control"
+                id="nome"
+                v-model="nome"
+                :placeholder="t('contactPage.form.namePlaceholder')"
+                required
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="email" class="form-label">{{ t('contactPage.form.emailLabel') }}</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                v-model="email"
+                :placeholder="t('contactPage.form.emailPlaceholder')"
+                required
+              />
+            </div>
+
+            <button type="submit" class="btn btn-success w-100">
+              {{ t('contactPage.form.submitButton') }}
+            </button>
+          </form>
         </div>
+      </div>
 
-        <div class="mb-3">
-          <label for="email" class="form-label">{{ t('contactPage.form.emailLabel') }}</label>
-          <input
-            type="email"
-            class="form-control"
-            id="email"
-            v-model="email"
-            :placeholder="t('contactPage.form.emailPlaceholder')"
-            required
-          />
+      <!-- Coluna: Mapa -->
+      <div class="col-md-6">
+        <h3 class="mb-3 text-start">Localização da UTFPR - Toledo</h3>
+        <div class="mapa-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3623.820351132375!2d-53.766341624975766!3d-24.733047105680583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94f395bcaf1f4697%3A0x8f229c248dfeae93!2sUTFPR%20-%20Campus%20Toledo!5e0!3m2!1spt-BR!2sbr!4v1750895253053!5m2!1spt-BR!2sbr"
+            width="100%"
+            height="400"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
         </div>
-
-        <button type="submit" class="btn btn-success w-100">
-          {{ t('contactPage.form.submitButton') }}
-        </button>
-      </form>
+      </div>
     </div>
   </div>
 </template>
+
 <style scoped>
 h2 {
   font-family: "Oswald", serif;
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin-bottom: 1.25rem;
 }
 .contact-form {
@@ -69,5 +92,10 @@ input.form-control {
 button.btn {
   font-size: 1rem;
   padding: 0.75em 0;
+}
+.mapa-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: start;
 }
 </style>
