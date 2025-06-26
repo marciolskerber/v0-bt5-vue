@@ -3,16 +3,48 @@ Projeto inicial para outros projetos com [__vue3__](https://vuejs.org/) e [__boo
 
 O esperado de um projeto incial:
 - [x] Mudar de tema (claro / escuro)
-- [x] Fazer o auto do tema ???
+- [x] Fazer o auto do tema (detecta preferência do sistema)
 - [x] Multi línguas ([vue-i18n](https://vue-i18n.intlify.dev/))
+- [x] Colocar mais palavras na tradução (i18n.json)
 - [ ] Pensar no site com a pasta layouts?!?
 - [ ] Busca interna ??? [algolia](https://www.algolia.com/developers) [typesense](https://typesense.org/)
 - [ ] Blog / Notícias ???
 - [ ] Mais frameworks CSS??? (beer, taywind)(templates)
 - [ ] Mais modelos de rodapé e menu principal
 - [ ] Colocar os ícones do bootstrap5
-- [ ] Colocar mais palavras na tradução (i18n.json)
 
+## Como Contribuir e Expandir
+
+Este boilerplate foi projetado para ser modular e fácil de expandir. Aqui estão alguns guias para tarefas comuns:
+
+### Como adicionar uma nova página (View)
+
+1.  **Crie o arquivo da View:** Adicione um novo arquivo `.vue` na pasta `src/views/`. Por exemplo: `src/views/NovaPagina.vue`.
+2.  **Adicione a Rota:** Abra o arquivo `src/router/index.ts` e adicione um novo objeto de rota ao array `routes`.
+    ```javascript
+    {
+      path: '/nova-pagina',
+      name: 'NovaPagina',
+      component: () => import('@/views/NovaPagina.vue')
+    }
+    ```
+3.  **Adicione o Link de Navegação (Opcional):** Para que a nova página apareça no menu, adicione a tradução do nome da rota em `src/i18n.json` dentro da seção `routes` e o componente `NavBar` irá renderizá-la automaticamente.
+
+### Estrutura de Componentes
+
+O projeto utiliza uma abordagem de componentes para manter o código organizado.
+
+-   **`App.vue`:** É o componente raiz que contém a estrutura principal da página.
+-   **`src/components/`:** Contém componentes reutilizáveis como `NavBar.vue` e `FooterBar.vue`. Sinta-se à vontade para criar seus próprios componentes aqui e importá-los onde precisar.
+
+### Internacionalização (i18n)
+
+Para adicionar ou modificar textos, edite o arquivo `src/i18n.json`.
+
+-   **Para usar um texto no seu template:** Use a função `t()` com a chave correspondente do JSON.
+    ```html
+    <p>{{ t('sua.chave.de.traducao') }}</p>
+    ```
 
 ## Referências:
 - [howbizarre](https://github.com/howbizarre/starter-template-vue-3-bootstrap-5-sass-dark-theme-typescript)
