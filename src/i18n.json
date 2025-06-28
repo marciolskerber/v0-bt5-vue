@@ -36,13 +36,13 @@
     "languageNames": {
       "pt": "Português",
       "en": "Inglês",
-      "es": "Espanhol"
+      "es": "Espanhol",
+      "fr": "Francês"
     },
     "aboutPage": {
       "title": "Sobre nós",
       "paragraph1": "Este site foi desenvolvido como parte da disciplina <strong>Web Front-End II</strong> da UTFPR, utilizando Vue 3, Vite, TypeScript, Beercss e i18n.",
-      "paragraph2": "O projeto demonstra boas práticas de front-end, com suporte a múltiplos idiomas, formulário funcional e responsividade.",
-      "paragraph3": "Desenvolvido por <strong>Vinícius Tabarão</strong>, aluno UTFPR."
+      "paragraph2": "O projeto demonstra boas práticas de front-end, com suporte a múltiplos idiomas, formulário funcional e responsividade."
     },
     "contactPage": {
       "title": "Fale conosco",
@@ -98,13 +98,13 @@
     "languageNames": {
       "pt": "Portuguese",
       "en": "English",
-      "es": "Spanish"
+      "es": "Spanish",
+      "fr": "French"
     },
     "aboutPage": {
       "title": "About Us",
       "paragraph1": "This website was developed as part of the <strong>Web Front-End II</strong> course at UTFPR, using Vue 3, Vite, TypeScript, Beercss, and i18n.",
-      "paragraph2": "The project demonstrates front-end best practices, with support for multiple languages, a functional form, and responsiveness.",
-      "paragraph3": "Developed by <strong>Vinícius Tabarão</strong>, a UTFPR student."
+      "paragraph2": "The project demonstrates front-end best practices, with support for multiple languages, a functional form, and responsiveness."
     },
     "contactPage": {
       "title": "Contact Us",
@@ -160,13 +160,13 @@
     "languageNames": {
       "pt": "Portugués",
       "en": "Inglés",
-      "es": "Español"
+      "es": "Español",
+      "fr": "Francés"
     },
     "aboutPage": {
       "title": "Sobre Nosotros",
       "paragraph1": "Este sitio web fue desarrollado como parte de la asignatura <strong>Web Front-End II</strong> de la UTFPR, utilizando Vue 3, Vite, TypeScript, Beercss e i18n.",
-      "paragraph2": "El proyecto demuestra buenas prácticas de front-end, con soporte para múltiples idiomas, un formulario funcional y responsividad.",
-      "paragraph3": "Desarrollado por <strong>Vinícius Tabarão</strong>, alumno de la UTFPR."
+      "paragraph2": "El proyecto demuestra buenas prácticas de front-end, con soporte para múltiples idiomas, un formulario funcional y responsividad."
     },
     "contactPage": {
       "title": "Contáctenos",
@@ -185,6 +185,69 @@
     "homePage": {
       "title": "Página de Inicio",
       "welcomeMessage": "Bienvenido a la página principal de nuestro sitio web."
+    }
+  },
+  "fr": {
+    "welcome": "Bienvenue sur notre site Web !",
+    "language": "Langue",
+    "navbar": {
+      "search": "Rechercher",
+      "darkMode": "Mode sombre",
+      "toggleNavigation": "Basculer la navigation",
+      "noResults": "Aucun résultat trouvé"
+    },
+    "routes": {
+      "home": "Accueil",
+      "about": "À propos",
+      "contact": "Contact",
+      "contacts": "Contact",
+      "search": "Rechercher"
+    },
+    "footer": {
+      "title": "Université Fédérale de Technologie du Paraná (UTFPR)",
+      "description": "L'UTFPR est un établissement d'enseignement supérieur axé sur la technologie et l'innovation, proposant des programmes de licence, de master et de recherche.",
+      "contact": "Contact",
+      "address": "R. Cristo Rei, 19 – Vila Becker, Toledo – PR, 85902-490",
+      "phone": "+55 (45) 3379-6800",
+      "email": "contato@utfpr.edu.br",
+      "socialMedia": {
+        "whatsapp": "Lien vers WhatsApp",
+        "twitter": "Lien vers Twitter",
+        "youtube": "Lien vers YouTube",
+        "instagram": "Lien vers Instagram",
+        "facebook": "Lien vers Facebook",
+        "linkedin": "Lien vers LinkedIn",
+        "tiktok": "Lien vers TikTok"
+      }
+    },
+    "languageNames": {
+      "pt": "Portugais",
+      "en": "Anglais",
+      "es": "Espagnol",
+      "fr": "Français"
+    },
+    "aboutPage": {
+      "title": "À propos de nous",
+      "paragraph1": "Ce site a été développé dans le cadre du cours <strong>Web Front-End II</strong> de l'UTFPR, en utilisant Vue 3, Vite, TypeScript, Beercss et i18n.",
+      "paragraph2": "Le projet démontre de bonnes pratiques de développement front-end, avec prise en charge multilingue, un formulaire fonctionnel et une interface réactive."
+    },
+    "contactPage": {
+      "title": "Contactez-nous",
+      "form": {
+        "nameLabel": "Nom",
+        "namePlaceholder": "Entrez votre nom",
+        "emailLabel": "E-mail",
+        "emailPlaceholder": "email@exemple.com",
+        "submitButton": "Envoyer",
+        "locationTitle": "Emplacement de l'UTFPR - Toledo",
+        "messageLabel": "Message",
+        "messagePlaceholder": "Tapez votre message ici...",
+        "successMessage": "Message envoyé avec succès !"
+      }
+    },
+    "homePage": {
+      "title": "Page d'accueil",
+      "welcomeMessage": "Bienvenue sur la page d'accueil de notre site."
     }
   }
 }

@@ -6,6 +6,12 @@ import FooterBar from "@/components/FooterBar.vue";
 const { t } = useI18n(); // Remova 'locale' pois não é usado
 </script>
 
+<style>
+[data-bs-theme] {
+  transition: background-color 10s ease, color 10s ease, border-color 10s ease;
+}
+</style>
+
 <template>
   <div id="app" class="d-flex flex-column min-vh-100">
     <!-- Exibição do texto traduzido (mantido) -->
