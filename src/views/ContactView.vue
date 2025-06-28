@@ -74,7 +74,6 @@ const enviarFormulario = () => {
 
 <style scoped>
 h2 {
-  font-family: "Oswald", serif;
   font-size: 2rem;
   margin-bottom: 1.25rem;
 }

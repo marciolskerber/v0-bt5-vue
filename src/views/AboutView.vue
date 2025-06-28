@@ -14,7 +14,6 @@ const { t } = useI18n();
 </template>
 <style scoped>
 h1 {
-  font-family: "Oswald", serif;
   font-size: 2rem;
   margin-bottom: 1.5rem;
 }

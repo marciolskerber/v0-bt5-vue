@@ -22,7 +22,7 @@
           </ul>
         </div>
 
-        <!-- Redes sociais com imagens locais -->
+        <!-- Redes sociais com ícones do Bootstrap -->
         <div class="col-md-4 mb-4">
           <h5 class="fw-bold">Social</h5>
           <div class="d-flex flex-wrap gap-2">
@@ -66,7 +66,7 @@ const socialMedia = [
   
 ];
 
-// função para pegar o caminho da imagem da pasta img
+// função para pegar o caminho do ícone na pasta do pacote bootstrap-icons
 const getIconPath = (name: string) => {
   return `node_modules/bootstrap-icons/bootstrap-icons.svg#${name}`;
 };
