@@ -51,7 +51,11 @@
         "namePlaceholder": "Digite seu nome",
         "emailLabel": "Email",
         "emailPlaceholder": "email@exemplo.com",
-        "submitButton": "Enviar"
+        "submitButton": "Enviar",
+        "locationTitle": "Localização da UTFPR - Toledo",
+        "messageLabel": "Mensagem",
+        "messagePlaceholder": "Digite sua mensagem aqui...",
+        "successMessage": "Mensagem enviada com sucesso!"
       }
     },
     "homePage": {
@@ -109,7 +113,11 @@
         "namePlaceholder": "Enter your name",
         "emailLabel": "Email",
         "emailPlaceholder": "email@example.com",
-        "submitButton": "Submit"
+        "submitButton": "Submit",
+        "locationTitle": "Location of UTFPR - Toledo",
+        "messageLabel": "Message",
+        "messagePlaceholder": "Type your message here...",
+        "successMessage": "Message sent successfully!"
       }
     },
     "homePage": {
@@ -167,7 +175,11 @@
         "namePlaceholder": "Escriba su nombre",
         "emailLabel": "Correo electrónico",
         "emailPlaceholder": "email@ejemplo.com",
-        "submitButton": "Enviar"
+        "submitButton": "Enviar",
+        "locationTitle": "Ubicación de la UTFPR - Toledo",
+        "messageLabel": "Mensaje",
+        "messagePlaceholder": "Escribe tu mensaje aquí...",
+        "successMessage": "¡Mensaje enviado con éxito!"
       }
     },
     "homePage": {
