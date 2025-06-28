@@ -8,7 +8,6 @@ const { t } = useI18n();
     <div class="about-text">
       <p v-html="t('aboutPage.paragraph1')"></p>
       <p v-html="t('aboutPage.paragraph2')"></p>
-      <p v-html="t('aboutPage.paragraph3')"></p>
     </div>
   </div>
 </template>

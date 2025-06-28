@@ -29,7 +29,8 @@ watch(darkMode, applyTheme);
 const languages = [
   { code: "pt" },
   { code: "en" },
-  { code: "es" }
+  { code: "es" },
+  { code: "fr" }
 ];
 const isLanguageOpen = ref(false);
 const changeLanguage = (lang: string) => {
