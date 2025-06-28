@@ -27,18 +27,18 @@
           <h5 class="fw-bold">Social</h5>
           <div class="d-flex flex-wrap gap-2">
             <a
-              v-for="(url, name) in socialMedia"
-              :key="name"
-              :href="url"
+              v-for="item in socialMedia"
+              :key="item"
+              :href="item.url"
+              :title="item.alt"
+              :aria-label="item.alt"
               target="_blank"
               rel="noopener"
               class="d-inline-block"
             >
-              <img
-                :src="getIconPath(name)"
-                :alt="name"
-                class="social-icon"
-              />
+              <svg class="bi" width="2em" height="2em" fill="currentColor">
+                <use :xlink:href="getIconPath(item.name)" />
+              </svg>
             </a>
           </div>
         </div>
@@ -55,17 +55,19 @@
 import { useI18n } from "vue-i18n";
 const { t } = useI18n();
 
-const socialMedia = {
-  whatsapp: t("footer.socialMedia.whatsapp"),
-  twitter: t("footer.socialMedia.twitter"),
-  youtube: t("footer.socialMedia.youtube"),
-  instagram: t("footer.socialMedia.instagram"),
-  facebook: t("footer.socialMedia.facebook"),
-  linkedin: t("footer.socialMedia.linkedin"),
-};
+const socialMedia = [
+  { name: "whatsapp", alt: t("footer.socialMedia.whatsapp"), url: "https://whatsapp.com/channel/0029Vb3tWIO3wtb3Jvag6Z0H" },
+  { name: "twitter-x", alt: t("footer.socialMedia.twitter"), url: "https://x.com/utfpr_td" },
+  { name: "tiktok", alt: t("footer.socialMedia.tiktok"), url: "https://tiktok.com/@utfpr.toledo" },
+  { name: "youtube", alt: t("footer.socialMedia.youtube"), url: "https://www.youtube.com/@UTFPRToledoOficial" },
+  { name: "instagram", alt: t("footer.socialMedia.instagram"), url: "https://www.instagram.com/utfprtd/" },
+  { name: "facebook", alt: t("footer.socialMedia.facebook"), url: "https://www.facebook.com/UTFPR.TD/" },
+  { name: "linkedin", alt: t("footer.socialMedia.linkedin"), url: "https://www.linkedin.com/school/utfpr-oficial/?originalSubdomain=br" },
+  
+];
 
 // função para pegar o caminho da imagem da pasta img
 const getIconPath = (name: string) => {
-  return new URL(`/src/img/${name}.png`, import.meta.url).href;
+  return `node_modules/bootstrap-icons/bootstrap-icons.svg#${name}`;
 };
 </script>

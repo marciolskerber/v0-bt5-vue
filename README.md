@@ -11,7 +11,7 @@ O esperado de um projeto incial:
 - [ ] Blog / Notícias ???
 - [ ] Mais frameworks CSS??? (beer, taywind)(templates)
 - [ ] Mais modelos de rodapé e menu principal
-- [ ] Colocar os ícones do bootstrap5
+- [x] Colocar os ícones do bootstrap5
 
 ## Como Contribuir e Expandir
 
