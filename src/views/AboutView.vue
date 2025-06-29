@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { useI18n } from 'vue-i18n';
+import { useI18n } from "vue-i18n";
 const { t } = useI18n();
 </script>
 <template>
   <div class="container mt-5">
-    <h1 class="mb-4 text-start">{{ t('aboutPage.title') }}</h1>
+    <h1 class="mb-4 text-start">{{ t("aboutPage.title") }}</h1>
     <div class="about-text">
       <p v-html="t('aboutPage.paragraph1')"></p>
       <p v-html="t('aboutPage.paragraph2')"></p>

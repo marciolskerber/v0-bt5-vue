@@ -13,7 +13,7 @@ const enviarFormulario = () => {
   console.log("Mensagem:", mensagem.value);
 
   //traduz a mensagem e limpa os campos
-   showToast();
+  showToast();
 
   nome.value = "";
   email.value = "";
@@ -27,7 +27,6 @@ const showToast = () => {
     toast.show();
   }
 };
-
 </script>
 
 <template>
@@ -99,7 +98,6 @@ const showToast = () => {
             width="100%"
             height="400"
             style="border: 0"
-            allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
           >
@@ -110,29 +108,29 @@ const showToast = () => {
   </div>
 
   <div
-  class="toast-container position-fixed bottom-0 end-0 p-3"
-  style="z-index: 9999"
->
-  <div
-    id="successToast"
-    class="toast align-items-center text-bg-success border-0"
-    role="alert"
-    aria-live="assertive"
-    aria-atomic="true"
+    class="toast-container position-fixed bottom-0 end-0 p-3"
+    style="z-index: 9999"
   >
-    <div class="d-flex">
-      <div class="toast-body">
-        {{ t('contactPage.form.successMessage') }}
+    <div
+      id="successToast"
+      class="toast align-items-center text-bg-success border-0"
+      role="alert"
+      aria-live="assertive"
+      aria-atomic="true"
+    >
+      <div class="d-flex">
+        <div class="toast-body">
+          {{ t("contactPage.form.successMessage") }}
+        </div>
+        <button
+          type="button"
+          class="btn-close btn-close-white me-2 m-auto"
+          data-bs-dismiss="toast"
+          aria-label="Close"
+        ></button>
       </div>
-      <button
-        type="button"
-        class="btn-close btn-close-white me-2 m-auto"
-        data-bs-dismiss="toast"
-        aria-label="Close"
-      ></button>
     </div>
   </div>
-</div>
 </template>
 
 <style scoped>

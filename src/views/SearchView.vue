@@ -47,15 +47,15 @@ watch(
   () => route.query.q,
   (newVal) => {
     searchTerm.value = newVal?.toString() || "";
-  }
+  },
 );
 
 // Filtra as rotas com base no termo
 const filteredRoutes = computed(() =>
   routes.filter((r) =>
     r.children?.some((c) =>
-      c.name?.toLowerCase().includes(searchTerm.value.toLowerCase())
-    )
-  )
+      c.name?.toLowerCase().includes(searchTerm.value.toLowerCase()),
+    ),
+  ),
 );
 </script>

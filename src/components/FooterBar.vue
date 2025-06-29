@@ -15,7 +15,10 @@
             <li>{{ t("footer.address") }}</li>
             <li>{{ t("footer.phone") }}</li>
             <li>
-              <a :href="'mailto:' + t('footer.email')" class="text-decoration-none">
+              <a
+                :href="'mailto:' + t('footer.email')"
+                class="text-decoration-none"
+              >
                 {{ t("footer.email") }}
               </a>
             </li>
@@ -56,14 +59,41 @@ import { useI18n } from "vue-i18n";
 const { t } = useI18n();
 
 const socialMedia = [
-  { name: "whatsapp", alt: t("footer.socialMedia.whatsapp"), url: "https://whatsapp.com/channel/0029Vb3tWIO3wtb3Jvag6Z0H" },
-  { name: "twitter-x", alt: t("footer.socialMedia.twitter"), url: "https://x.com/utfpr_td" },
-  { name: "tiktok", alt: t("footer.socialMedia.tiktok"), url: "https://tiktok.com/@utfpr.toledo" },
-  { name: "youtube", alt: t("footer.socialMedia.youtube"), url: "https://www.youtube.com/@UTFPRToledoOficial" },
-  { name: "instagram", alt: t("footer.socialMedia.instagram"), url: "https://www.instagram.com/utfprtd/" },
-  { name: "facebook", alt: t("footer.socialMedia.facebook"), url: "https://www.facebook.com/UTFPR.TD/" },
-  { name: "linkedin", alt: t("footer.socialMedia.linkedin"), url: "https://www.linkedin.com/school/utfpr-oficial/?originalSubdomain=br" },
-  
+  {
+    name: "whatsapp",
+    alt: t("footer.socialMedia.whatsapp"),
+    url: "https://whatsapp.com/channel/0029Vb3tWIO3wtb3Jvag6Z0H",
+  },
+  {
+    name: "twitter-x",
+    alt: t("footer.socialMedia.twitter"),
+    url: "https://x.com/utfpr_td",
+  },
+  {
+    name: "tiktok",
+    alt: t("footer.socialMedia.tiktok"),
+    url: "https://tiktok.com/@utfpr.toledo",
+  },
+  {
+    name: "youtube",
+    alt: t("footer.socialMedia.youtube"),
+    url: "https://www.youtube.com/@UTFPRToledoOficial",
+  },
+  {
+    name: "instagram",
+    alt: t("footer.socialMedia.instagram"),
+    url: "https://www.instagram.com/utfprtd/",
+  },
+  {
+    name: "facebook",
+    alt: t("footer.socialMedia.facebook"),
+    url: "https://www.facebook.com/UTFPR.TD/",
+  },
+  {
+    name: "linkedin",
+    alt: t("footer.socialMedia.linkedin"),
+    url: "https://www.linkedin.com/school/utfpr-oficial/?originalSubdomain=br",
+  },
 ];
 
 // função para pegar o caminho do ícone na pasta do pacote bootstrap-icons

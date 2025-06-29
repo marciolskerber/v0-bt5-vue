@@ -19,7 +19,7 @@ const detectThemeFromSystem = () => {
 const applyTheme = () => {
   document.documentElement.setAttribute(
     "data-bs-theme",
-    darkMode.value ? "dark" : "light"
+    darkMode.value ? "dark" : "light",
   );
   localStorage.setItem("theme", darkMode.value ? "dark" : "light");
 };
@@ -30,7 +30,7 @@ const languages = [
   { code: "pt" },
   { code: "en" },
   { code: "es" },
-  { code: "fr" }
+  { code: "fr" },
 ];
 const isLanguageOpen = ref(false);
 const changeLanguage = (lang: string) => {
@@ -56,9 +56,9 @@ const query = ref("");
 const filteredRoutes = computed(() =>
   routes.filter((r) =>
     r.children?.some((c) =>
-      c.name?.toLowerCase().includes(query.value.toLowerCase())
-    )
-  )
+      c.name?.toLowerCase().includes(query.value.toLowerCase()),
+    ),
+  ),
 );
 
 const goToSearch = () => {
@@ -90,7 +90,7 @@ const goToSearch = () => {
         <!-- links das rotas, exceto as com meta.hidden -->
         <ul class="navbar-nav">
           <li
-            v-for="route in routes.filter(r => !r.meta?.hidden)"
+            v-for="route in routes.filter((r) => !r.meta?.hidden)"
             :key="route.path"
             class="nav-item text-uppercase"
           >
