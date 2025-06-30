@@ -194,7 +194,8 @@
       "home": "Inicio",
       "about": "Sobre",
       "contact": "Contacto",
-      "contacts": "Contacto"
+      "contacts": "Contacto",
+      "news": "Noticias"
     },
     "footer": {
       "title": "Universidad Tecnológica Federal de Paraná (UTFPR)",
@@ -241,6 +242,32 @@
     "homePage": {
       "title": "Página de Inicio",
       "welcomeMessage": "Bienvenido a la página principal de nuestro sitio web."
+    },
+    "newsPage": {
+      "firstNews": {
+        "title": "UTFPR firma una asociación de R$ 39 millones con una petrolera china para investigación tecnológica",
+        "description": "El proyecto será realizado por el Núcleo de Flujo Multifásico del Campus Curitiba"
+      },
+      "secondNews": {
+        "title": "La ceremonia de toma de posesión de la Vicerrectoría será el próximo lunes, 30",
+        "description": "El mismo día también tomará posesión el director general del Campus Curitiba"
+      },
+      "thirdNews": {
+        "title": "Nota de Pesar: José Sollak",
+        "description": "El servidor jubilado de UTFPR falleció este jueves 26 de junio a los 76 años"
+      },
+      "fourthNews": {
+        "title": "Investigador se une a grupo de científicos que utilizarán el telescopio más grande del mundo",
+        "description": "Felipe Ribas estuvo en el lanzamiento del Observatorio Vera C. Rubin para presentar sus estudios"
+      },
+      "fifthNews": {
+        "title": "Investigación revela que la producción ecológica es la más rentable para la agricultura familiar",
+        "description": "El estudio comparó propiedades rurales que adoptan el modelo tradicional de cultivo con aquellas que utilizan agroecología"
+      },
+      "sixtiethNews": {
+        "title": "Proppg lanza convocatoria inédita para registro de becas externas de Iniciación Científica y Tecnológica",
+        "description": "La iniciativa permitirá el reconocimiento institucional de estos becarios"
+      }
     }
   },
   "fr": {
