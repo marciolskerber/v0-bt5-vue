@@ -13,7 +13,8 @@
       "about": "Sobre",
       "contact": "Contato",
       "contacts": "Contato",
-      "search": "Buscar"
+      "search": "Buscar",
+      "news": "Notícias"
     },
     "footer": {
       "title": "Universidade Tecnológica Federal do Paraná (UTFPR)",
@@ -63,6 +64,32 @@
     "homePage": {
       "title": "Página Inicial",
       "welcomeMessage": "Bem-vindo à página principal do nosso site."
+    },
+    "newsPage": {
+      "firstNews": {
+        "title": "UTFPR firma parceria de R$ 39 milhões com petrolífera chinesa para pesquisa tecnológica",
+        "description": "Projeto será realizado pelo Núcleo de Escoamento Multifásico do Campus Curitiba"
+      },
+      "secondNews": {
+        "title": "Cerimônia de posse da Vice-Reitoria será na próxima segunda, 30",
+        "description": "No mesmo dia, também acontecerá posse do diretor-geral do Campus Curitiba"
+      },
+      "thirdNews": {
+        "title": "Nota de Pesar: José Sollak",
+        "description": "Servidor aposentado da UTFPR faleceu nesta quinta-feira, 26 de junho, aos 76 anos"
+      },
+      "fourthNews": {
+        "title": "Pesquisador integra grupo de cientistas a usar o maior telescópio do mundo",
+        "description": "Felipe Ribas esteve no lançamento do Observatório Vera C. Rubin para apresentar seus estudos."
+      },
+      "fifthNews": {
+        "title": "Pesquisa revela que produção ecológica é a mais rentável para agricultura familiar",
+        "description": "Estudo comparou propriedades rurais que adotam modelo tradicional de cultivo com as que usam agroecologia"
+      },
+      "sixtiethNews": {
+        "title": "Proppg lança edital inédito para registro de bolsas externas de Iniciação Científica e Tecnológica",
+        "description": "Iniciativa permitirá o reconhecimento institucional desses bolsistas"
+      }
     }
   },
   "en": {
