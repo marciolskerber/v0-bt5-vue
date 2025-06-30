@@ -31,7 +31,7 @@
           <div class="d-flex flex-wrap gap-2">
             <a
               v-for="item in socialMedia"
-              :key="item"
+              :key="item.url"
               :href="item.url"
               :title="item.alt"
               :aria-label="item.alt"
