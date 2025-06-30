@@ -34,6 +34,16 @@ export const routes = [
     ],
   },
   {
+    path: `${baseUrl}/news`,
+    children: [
+      {
+        path: "",
+        name: "News",
+        component: () => import("@/views/NewsView.vue"),
+      },
+    ],
+  },
+  {
     path: `${baseUrl}/search`,
     meta: { hidden: true },
     children: [
