@@ -105,7 +105,8 @@
       "home": "Home",
       "about": "About",
       "contact": "Contact",
-      "contacts": "Contact"
+      "contacts": "Contact",
+      "news": "News"
     },
     "footer": {
       "title": "Federal University of Technology – Paraná (UTFPR)",
@@ -152,6 +153,32 @@
     "homePage": {
       "title": "Home Page",
       "welcomeMessage": "Welcome to the main page of our website."
+    },
+    "newsPage": {
+      "firstNews": {
+        "title": "UTFPR signs partnership of R$ 39 million with Chinese oil company for technological research",
+        "description": "Project will be carried out by the Multiphase Flow Center at the Curitiba Campus"
+      },
+      "secondNews": {
+        "title": "Vice-Rector's inauguration ceremony will be next Monday, 30th",
+        "description": "On the same day, the director-general of the Curitiba Campus will also take office"
+      },
+      "thirdNews": {
+        "title": "Obituary: José Sollak",
+        "description": "Retired UTFPR employee passed away this Thursday, June 26th, at the age of 76"
+      },
+      "fourthNews": {
+        "title": "Researcher joins group of scientists using the world's largest telescope",
+        "description": "Felipe Ribas participated in the launch of the Vera C. Rubin Observatory to present his studies."
+      },
+      "fifthNews": {
+        "title": "Research reveals ecological farming is most profitable for family agriculture",
+        "description": "Study compared farms using traditional cultivation with those using agroecology"
+      },
+      "sixtiethNews": {
+        "title": "Proppg launches unprecedented call for registration of external Scientific and Technological Initiation scholarships",
+        "description": "Initiative will allow institutional recognition of these scholarship holders"
+      }
     }
   },
   "es": {
