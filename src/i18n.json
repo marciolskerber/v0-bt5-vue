@@ -232,6 +232,7 @@
       "title": "À propos de nous",
       "paragraph1": "Ce site a été développé dans le cadre du cours <strong>Web Front-End II</strong> de l'UTFPR, en utilisant Vue 3, Vite, TypeScript, Beercss et i18n.",
       "paragraph2": "Le projet démontre de bonnes pratiques de développement front-end, avec prise en charge multilingue, un formulaire fonctionnel et une interface réactive."
+      
     },
     "contactPage": {
       "title": "Contactez-nous",
