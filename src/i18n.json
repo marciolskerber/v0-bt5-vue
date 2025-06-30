@@ -284,7 +284,8 @@
       "about": "À propos",
       "contact": "Contact",
       "contacts": "Contact",
-      "search": "Rechercher"
+      "search": "Rechercher",
+      "news": "Nouvelles"
     },
     "footer": {
       "title": "Université Fédérale de Technologie du Paraná (UTFPR)",
@@ -331,6 +332,32 @@
     "homePage": {
       "title": "Page d'accueil",
       "welcomeMessage": "Bienvenue sur la page d'accueil de notre site."
+    },
+    "newsPage": {
+      "firstNews": {
+        "title": "L'UTFPR signe un partenariat de 39 millions de R$ avec une compagnie pétrolière chinoise pour la recherche technologique",
+        "description": "Le projet sera réalisé par le Centre d'Écoulement Multiphase du Campus de Curitiba"
+      },
+      "secondNews": {
+        "title": "La cérémonie d'investiture de la Vice-Présidence aura lieu lundi prochain, le 30",
+        "description": "Le même jour aura également lieu l'investiture du directeur général du Campus de Curitiba"
+      },
+      "thirdNews": {
+        "title": "Avis de Décès : José Sollak",
+        "description": "L'employé retraité de l'UTFPR est décédé ce jeudi 26 juin à l'âge de 76 ans"
+      },
+      "fourthNews": {
+        "title": "Un chercheur rejoint un groupe de scientifiques utilisant le plus grand télescope du monde",
+        "description": "Felipe Ribas a assisté au lancement de l'Observatoire Vera C. Rubin pour présenter ses recherches"
+      },
+      "fifthNews": {
+        "title": "Une étude révèle que la production écologique est la plus rentable pour l'agriculture familiale",
+        "description": "L'étude a comparé des exploitations agricoles utilisant le modèle traditionnel à celles utilisant l'agroécologie"
+      },
+      "sixtiethNews": {
+        "title": "Le Proppg lance un appel inédit pour l'enregistrement de bourses externes d'Initiation Scientifique et Technologique",
+        "description": "L'initiative permettra la reconnaissance institutionnelle de ces boursiers"
+      }
     }
   }
 }
