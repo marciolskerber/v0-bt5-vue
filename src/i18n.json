@@ -88,6 +88,10 @@
       "sixtiethNews": {
         "title": "Proppg lança edital inédito para registro de bolsas externas de Iniciação Científica e Tecnológica",
         "description": "Iniciativa permitirá o reconhecimento institucional desses bolsistas"
+      },
+      "carousel": {
+        "prev": "Anterior",
+        "next": "Próximo"
       }
     }
   },
@@ -177,6 +181,10 @@
       "sixtiethNews": {
         "title": "Proppg launches unprecedented call for registration of external Scientific and Technological Initiation scholarships",
         "description": "Initiative will allow institutional recognition of these scholarship holders"
+      },
+      "carousel": {
+        "prev": "Previous",
+        "next": "Next"
       }
     }
   },
@@ -266,6 +274,10 @@
       "sixtiethNews": {
         "title": "Proppg lanza convocatoria inédita para registro de becas externas de Iniciación Científica y Tecnológica",
         "description": "La iniciativa permitirá el reconocimiento institucional de estos becarios"
+      },
+      "carousel": {
+        "prev": "Anterior",
+        "next": "Siguiente"
       }
     }
   },
@@ -357,6 +369,10 @@
       "sixtiethNews": {
         "title": "Le Proppg lance un appel inédit pour l'enregistrement de bourses externes d'Initiation Scientifique et Technologique",
         "description": "L'initiative permettra la reconnaissance institutionnelle de ces boursiers"
+      },
+      "carousel": {
+        "prev": "Précédent",
+        "next": "Suivant"
       }
     }
   }
