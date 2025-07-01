@@ -1,31 +1,37 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 import { useI18n } from "vue-i18n";
+import * as bootstrap from "bootstrap";
 
 const { t } = useI18n();
 const nome = ref("");
 const email = ref("");
 const mensagem = ref("");
 
+// Refs para o Toast
+const toastEl = ref(null);
+let toastInstance: bootstrap.Toast | null = null;
+
+onMounted(() => {
+  if (toastEl.value) {
+    toastInstance = new bootstrap.Toast(toastEl.value);
+  }
+});
+
+const showToast = () => {
+  toastInstance?.show();
+};
+
 const enviarFormulario = () => {
   console.log("Nome:", nome.value);
   console.log("Email:", email.value);
   console.log("Mensagem:", mensagem.value);
 
-  //traduz a mensagem e limpa os campos
   showToast();
 
   nome.value = "";
   email.value = "";
   mensagem.value = "";
-};
-
-const showToast = () => {
-  const toastEl = document.getElementById("successToast");
-  if (toastEl) {
-    const toast = new bootstrap.Toast(toastEl);
-    toast.show();
-  }
 };
 </script>
 
@@ -113,6 +119,7 @@ const showToast = () => {
   >
     <div
       id="successToast"
+      ref="toastEl"
       class="toast align-items-center text-bg-success border-0"
       role="alert"
       aria-live="assertive"
