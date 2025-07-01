@@ -5,7 +5,7 @@ import { routes } from "@/router";
 import { useI18n } from "vue-i18n";
 
 const router = useRouter();
-const { t, locale } = useI18n();
+const { t, locale, availableLocales } = useI18n();
 
 const activeRoute = computed(() => router.currentRoute.value.path);
 const isActive = (path: string) => path === activeRoute.value;
@@ -26,12 +26,9 @@ const applyTheme = () => {
 watch(darkMode, applyTheme);
 
 /* idiomas */
-const languages = [
-  { code: "pt" },
-  { code: "en" },
-  { code: "es" },
-  { code: "fr" },
-];
+const languages = computed(() =>
+  availableLocales.map((lang) => ({ code: lang })),
+);
 const isLanguageOpen = ref(false);
 const changeLanguage = (lang: string) => {
   locale.value = lang;
@@ -46,7 +43,7 @@ onMounted(() => {
     .addEventListener("change", detectThemeFromSystem);
 
   const savedLanguage = localStorage.getItem("language");
-  if (savedLanguage && languages.some((l) => l.code === savedLanguage)) {
+  if (savedLanguage && languages.value.some((l) => l.code === savedLanguage)) {
     locale.value = savedLanguage;
   }
 });
