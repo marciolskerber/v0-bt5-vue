@@ -2,10 +2,11 @@ import { createApp } from "vue";
 import { createI18n } from "vue-i18n";
 import App from "@/App.vue";
 import { router } from "@/router";
-import "bootstrap/scss/bootstrap.scss";
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.min.js'
+import '@/custom.css'
 import translateFile from "@/i18n.json";
 import ChatBot from '@/components/ChatBot.vue'
-
 
 // Definir as traduções para o idioma
 const messages = translateFile;

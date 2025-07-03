@@ -16,6 +16,7 @@
     "@algolia/autocomplete-js": "^1.18.1",
     "@popperjs/core": "^2.11.8",
     "algoliasearch": "^5.20.3",
+    "beercss": "^3.11.30",
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.13.1",
     "save-dev": "^0.0.1-security",

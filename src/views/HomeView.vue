@@ -1,7 +1,7 @@
 <template>
   <main>
 
-    <h1 class="text-center">{{ t("welcome") }}</h1>
+    <h1 class="text-secondary text-center bg-primary">{{ t("welcome") }}</h1>
     
     <!-- Adiciona o carrossel -->
     <AppCarousel />
