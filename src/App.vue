@@ -15,7 +15,7 @@ const { t } = useI18n(); // Remova 'locale' pois não é usado
     <Navbar />
     <div class="flex-fill d-flex flex-column">
 
-    <h1 class="text-center">{{ t("welcome") }}</h1>
+    
 
     <!-- Renderiza as rotas (HomeView, AboutView, ContactsView, etc.) -->
     <!-- Conteúdo principal ocupa todo espaço disponível -->

@@ -1,5 +1,8 @@
 <template>
   <main>
+
+    <h1 class="text-center">{{ t("welcome") }}</h1>
+    
     <!-- Adiciona o carrossel -->
     <AppCarousel />
     <div class="container py-5">
