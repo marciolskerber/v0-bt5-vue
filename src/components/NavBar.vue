@@ -67,7 +67,7 @@ const goToSearch = () => {
 </script>
 
 <template>
-  <nav class="navbar navbar-expand-md sticky-top bg-primary">
+  <nav class="navbar navbar-expand-md sticky-top">
     <div class="container">
       <button
         class="navbar-toggler"
