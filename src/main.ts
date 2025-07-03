@@ -2,11 +2,11 @@ import { createApp } from "vue";
 import { createI18n } from "vue-i18n";
 import App from "@/App.vue";
 import { router } from "@/router";
-import 'bootstrap/dist/css/bootstrap.min.css'
-import 'bootstrap/dist/js/bootstrap.min.js'
-import '@/custom.css'
 import translateFile from "@/i18n.json";
-import ChatBot from '@/components/ChatBot.vue'
+import ChatBot from '@/components/ChatBot.vue';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap';
+import './assets/custom.css'; // importa o CSS com as cores UTFPR
 
 // Definir as traduções para o idioma
 const messages = translateFile;

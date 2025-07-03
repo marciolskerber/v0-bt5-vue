@@ -67,33 +67,28 @@ const goToSearch = () => {
 </script>
 
 <template>
-  <nav class="navbar navbar-expand-md sticky-top">
+  <nav class="navbar navbar-expand-lg bg-utfpr py-3 shadow-sm fixed-link fw-bold">
     <div class="container">
-      <button
-        class="navbar-toggler"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        :aria-label="t('navbar.toggleNavigation')"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
+       <a class="navbar-brand text-white fw-bold" href="#">UTFPR</a>
+
+       <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
       <div
         id="navbarNav"
-        class="collapse navbar-collapse d-flex justify-content-between"
+        class="collapse navbar-collapse d-flex justify-content-between "
       >
         <!-- links das rotas, exceto as com meta.hidden -->
-        <ul class="navbar-nav">
+        <ul class="navbar-nav ">
           <li
             v-for="route in routes.filter((r) => !r.meta?.hidden)"
             :key="route.path"
-            class="nav-item text-uppercase"
+            class="nav-item text-uppercase "
           >
             <router-link
               :to="route.path"
-              class="nav-link"
+              class="nav-link text-black fixed-link"
               :class="{ active: isActive(route.path) }"
             >
               {{
