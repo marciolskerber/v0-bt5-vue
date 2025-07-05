@@ -1,14 +1,26 @@
-import { createApp } from "vue";
-import { createI18n } from "vue-i18n";
-import App from "@/App.vue";
+// src/main.ts
+import { createApp } from 'vue'
+import App from './App.vue'
 import { router } from "@/router";
+import "bootstrap/scss/bootstrap.scss";
+
+// Estilos globais
+import './assets/styles.scss'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'aos/dist/aos.css'
+
+// Bibliotecas JS
+import AOS from 'aos'
+
+// i18n
+import { createI18n } from "vue-i18n";
 import translateFile from "@/i18n.json";
-import ChatBot from '@/components/ChatBot.vue';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap';
-import './assets/custom.css'; // importa o CSS com as cores UTFPR
+
+// Componentes globais
+import ChatBot from './components/ChatBot.vue'
 
 // Definir as traduções para o idioma
+
 const messages = translateFile;
 const availableLocales = Object.keys(messages);
 
@@ -34,7 +46,13 @@ const i18n = createI18n({
   messages, // Mensagens definidas
 });
 
-const app = createApp(App).use(router).use(i18n);
-app.component('ChatBot', ChatBot)   // registro global
+// 🚀 Inicializar app
+const app = createApp(App)
 
-router.isReady().then(() => app.mount("#app"));
+AOS.init()
+
+app.use(router)
+app.use(i18n)
+app.component('ChatBot', ChatBot)
+
+router.isReady().then(() => app.mount('#app'))

@@ -36,7 +36,7 @@ const enviarFormulario = () => {
 </script>
 
 <template>
-  <div class="container mt-5">
+  <div class="container mt-5 main-gradient">
     <div class="row">
       <!-- Coluna: Formulário -->
       <div class="col-md-6 mb-4">

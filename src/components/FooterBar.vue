@@ -1,15 +1,15 @@
 <template>
-  <footer class="pt-4 border-top mt-5 bg-body-secondary text-body mt-auto">
+  <footer class="pt-5 border-top mt-5 bg-dark text-light mt-auto">
     <div class="container py-4">
       <div class="row">
         <!-- Institucional -->
-        <div class="col-md-4 mb-4">
+        <div class="col-md-4 mb-4" data-aos="fade-up">
           <h5 class="fw-bold">{{ t("footer.title") }}</h5>
-          <p>{{ t("footer.description") }}</p>
+          <p class="text-opacity-75">{{ t("footer.description") }}</p>
         </div>
 
         <!-- Contato -->
-        <div class="col-md-4 mb-4">
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
           <h5 class="fw-bold">{{ t("footer.contact") }}</h5>
           <ul class="list-unstyled">
             <li>{{ t("footer.address") }}</li>
@@ -17,7 +17,7 @@
             <li>
               <a
                 :href="'mailto:' + t('footer.email')"
-                class="text-decoration-none"
+                class="text-decoration-none text-info"
               >
                 {{ t("footer.email") }}
               </a>
@@ -25,8 +25,8 @@
           </ul>
         </div>
 
-        <!-- Redes sociais com ícones do Bootstrap -->
-        <div class="col-md-4 mb-4">
+        <!-- Redes sociais -->
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
           <h5 class="fw-bold">Social</h5>
           <div class="d-flex flex-wrap gap-2">
             <a
@@ -37,7 +37,7 @@
               :aria-label="item.alt"
               target="_blank"
               rel="noopener"
-              class="d-inline-block"
+              class="d-inline-block icon-hover"
             >
               <svg class="bi" width="2em" height="2em" fill="currentColor">
                 <use :xlink:href="getIconPath(item.name)" />
@@ -96,8 +96,17 @@ const socialMedia = [
   },
 ];
 
-// função para pegar o caminho do ícone na pasta do pacote bootstrap-icons
 const getIconPath = (name: string) => {
   return `node_modules/bootstrap-icons/bootstrap-icons.svg#${name}`;
 };
 </script>
+
+<style scoped>
+.icon-hover svg {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.icon-hover:hover svg {
+  transform: scale(1.2);
+  color: #0dcaf0;
+}
+</style>

@@ -10,7 +10,7 @@ const { t, locale, availableLocales } = useI18n();
 const activeRoute = computed(() => router.currentRoute.value.path);
 const isActive = (path: string) => path === activeRoute.value;
 
-/* tema claro/escuro */
+// 🔆 Tema claro/escuro com ícone
 const darkMode = ref(false);
 const detectThemeFromSystem = () => {
   darkMode.value = window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -19,15 +19,15 @@ const detectThemeFromSystem = () => {
 const applyTheme = () => {
   document.documentElement.setAttribute(
     "data-bs-theme",
-    darkMode.value ? "dark" : "light",
+    darkMode.value ? "dark" : "light"
   );
   localStorage.setItem("theme", darkMode.value ? "dark" : "light");
 };
 watch(darkMode, applyTheme);
 
-/* idiomas */
+// 🌍 Idiomas
 const languages = computed(() =>
-  availableLocales.map((lang) => ({ code: lang })),
+  availableLocales.map((lang) => ({ code: lang }))
 );
 const isLanguageOpen = ref(false);
 const changeLanguage = (lang: string) => {
@@ -36,6 +36,7 @@ const changeLanguage = (lang: string) => {
   localStorage.setItem("language", lang);
 };
 
+// 🎯 Inicialização
 onMounted(() => {
   detectThemeFromSystem();
   window
@@ -48,16 +49,15 @@ onMounted(() => {
   }
 });
 
-/* busca */
+// 🔍 Busca
 const query = ref("");
 const filteredRoutes = computed(() =>
   routes.filter((r) =>
     r.children?.some((c) =>
-      c.name?.toLowerCase().includes(query.value.toLowerCase()),
-    ),
-  ),
+      c.name?.toLowerCase().includes(query.value.toLowerCase())
+    )
+  )
 );
-
 const goToSearch = () => {
   if (query.value.trim()) {
     router.push({ path: "/search", query: { q: query.value } });
@@ -67,24 +67,32 @@ const goToSearch = () => {
 </script>
 
 <template>
-  <nav class="navbar navbar-expand-lg bg-utfpr py-3 shadow-sm fixed-link fw-bold">
+  <nav
+    data-aos="fade-up"
+    class="navbar navbar-expand-lg py-3 shadow-sm fixed-link fw-bold"
+  >
     <div class="container">
-       <a class="navbar-brand text-white fw-bold" href="#">UTFPR</a>
+      <a class="navbar-brand text-white fw-bold" href="#">UTFPR</a>
 
-       <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+      <button
+        class="navbar-toggler border-0"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
       <div
         id="navbarNav"
-        class="collapse navbar-collapse d-flex justify-content-between "
+        class="collapse navbar-collapse d-flex justify-content-between"
       >
-        <!-- links das rotas, exceto as com meta.hidden -->
-        <ul class="navbar-nav ">
+        <!-- 🌐 Rotas -->
+        <ul class="navbar-nav">
           <li
             v-for="route in routes.filter((r) => !r.meta?.hidden)"
             :key="route.path"
-            class="nav-item text-uppercase "
+            class="nav-item text-uppercase"
           >
             <router-link
               :to="route.path"
@@ -92,7 +100,7 @@ const goToSearch = () => {
               :class="{ active: isActive(route.path) }"
             >
               {{
-                route.children[0]?.name
+                  route.children[0]?.name
                   ? t(`routes.${route.children[0].name.toLowerCase()}`)
                   : ""
               }}
@@ -100,25 +108,25 @@ const goToSearch = () => {
           </li>
         </ul>
 
-        <!-- busca + idioma + switch tema -->
+        <!-- 🎛️ Ações -->
         <div class="d-flex align-items-center">
-          <!-- Formulário de busca com Enter -->
+          <!-- 🔍 Campo de busca estilizado -->
           <form @submit.prevent="goToSearch" class="d-flex me-2">
             <input
               v-model="query"
               :placeholder="t('navbar.search')"
-              class="form-control"
+              class="form-control rounded-pill"
             />
           </form>
 
-          <!-- dropdown resultados (opcional, pode remover se não usar) -->
+          <!-- 📝 Resultados (opcional) -->
           <ul v-if="query && filteredRoutes.length" class="search-results">
             <li v-for="r in filteredRoutes" :key="r.path">
               {{ t(`routes.${r.children[0].name.toLowerCase()}`) }}
             </li>
           </ul>
 
-          <!-- seletor de idioma -->
+          <!-- 🌐 Idiomas -->
           <div class="language-selector ms-3">
             <button
               class="btn btn-outline-secondary dropdown-toggle"
@@ -147,7 +155,7 @@ const goToSearch = () => {
             </ul>
           </div>
 
-          <!-- dark-mode switch -->
+          <!-- 🌗 Switch tema com ícones -->
           <div class="form-check form-switch ms-3">
             <input
               id="darkModeSwitch"
@@ -156,7 +164,8 @@ const goToSearch = () => {
               v-model="darkMode"
             />
             <label class="form-check-label" for="darkModeSwitch">
-              {{ t("navbar.darkMode") }}
+              <span v-if="darkMode">🌙</span>
+              <span v-else>🌞</span>
             </label>
           </div>
         </div>
